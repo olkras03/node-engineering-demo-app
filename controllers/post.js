@@ -21,21 +21,21 @@ exports.post_create = function (req, res, next) {
     })
 };
 
-exports.post_details = function (req, res) {
+exports.post_details = function (req, res, next) {
     Post.findById(req.params.id, function (err, post) {
         if (err) return next(err);
         res.send(post);
     })
 };
 
-exports.post_update = function (req, res) {
-    Post.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, post) {
+exports.post_update = function (req, res, next) {
+    Post.findByIdAndUpdate(req.params.id, {$set: req.query}, function (err, post) {
         if (err) return next(err);
         res.send('Post udpated.');
     });
 };
 
-exports.post_delete = function (req, res) {
+exports.post_delete = function (req, res, next) {
     Post.findByIdAndRemove(req.params.id, function (err) {
         if (err) return next(err);
         res.send('Deleted successfully!');

@@ -9,13 +9,13 @@ var post_controller = require('../controllers/post');
 router.get('/test', post_controller.test);
 
 
-router.post('/create', post_controller.post_create);
+router.post('/', post_controller.post_create);
 
 router.get('/:id', post_controller.post_details);
 
-router.put('/:id/update', post_controller.post_update);
+router.put('/:id', post_controller.post_update);
 
-router.delete('/:id/delete', post_controller.post_delete);
+router.delete('/:id', post_controller.post_delete);
 
 
 module.exports = router;
