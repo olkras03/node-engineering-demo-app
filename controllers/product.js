@@ -5,11 +5,12 @@ exports.test = function (req, res) {
     res.send('Greetings from the Test controller!');
 };
 
-exports.product_create = function (req, res) {
+exports.product_create = function (req, res, next) {
+
     var product = new Product(
         {
-            name: req.body.name,
-            price: req.body.price
+            name: req.query.name,
+            price: req.query.price
         }
     );
 
