@@ -29,5 +29,5 @@ ProductsApp is web service created using the [Express](https://expressjs.com/) f
 * [Express](https://expressjs.com/)
 * [Mongoose](https://mongoosejs.com/)
 * [Pug](https://pugjs.org/api/getting-started.html) templates
-* [Jest] for unit tests
+* [Jest](https://jestjs.io/en/) for unit tests
 * [Cypress](https://www.cypress.io/) for feature tests
