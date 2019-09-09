@@ -3,7 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var product = require('./routes/product'); // Imports routes for the products
+var post = require('./routes/post'); // Imports routes for the posts
 var app = express();
 
 
@@ -18,7 +18,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/products', product);
+app.use('/posts', post);
 
 var port = 1234;
 
